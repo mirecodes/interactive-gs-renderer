@@ -14,6 +14,7 @@ export function GaussianViewer({ scene }: GaussianViewerProps) {
   
   // UI Controls State
   const [meshVisible, setMeshVisible] = useState(false);
+  const [showJoints, setShowJoints] = useState(false);
   const [globalRotation, setGlobalRotation] = useState(0);
   const [jointValues, setJointValues] = useState<Record<string, number>>({});
 
@@ -26,6 +27,7 @@ export function GaussianViewer({ scene }: GaussianViewerProps) {
     scene,
     onLoadStateChange: handleLoadStateChange,
     meshVisible,
+    showJoints,
     globalRotation,
     jointValues,
   });
@@ -64,6 +66,14 @@ export function GaussianViewer({ scene }: GaussianViewerProps) {
                   type="checkbox" 
                   checked={meshVisible} 
                   onChange={(e) => setMeshVisible(e.target.checked)} 
+                />
+              </div>
+              <div className="toggle-container">
+                <label>Joints</label>
+                <input 
+                  type="checkbox" 
+                  checked={showJoints} 
+                  onChange={(e) => setShowJoints(e.target.checked)} 
                 />
               </div>
             </div>

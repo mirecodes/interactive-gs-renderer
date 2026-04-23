@@ -20,6 +20,7 @@ interface UseGaussianViewerOptions {
   meshVisible: boolean;
   globalRotation: number;
   jointValues: Record<string, number>;
+  showJoints: boolean;
 }
 
 export function useGaussianViewer({
@@ -29,8 +30,10 @@ export function useGaussianViewer({
   meshVisible,
   globalRotation,
   jointValues,
+  showJoints,
 }: UseGaussianViewerOptions) {
   const robotRef = useRef<any>(null);
+  const jointHelpersRef = useRef<THREE.Group | null>(null);
   const [joints, setJoints] = useState<JointInfo[]>([]);
 
   // Function to sync visibility across all meshes
@@ -50,6 +53,13 @@ export function useGaussianViewer({
   useEffect(() => {
     syncMeshVisibility(meshVisible);
   }, [meshVisible, syncMeshVisibility]);
+
+  // Update joint helpers visibility
+  useEffect(() => {
+    if (jointHelpersRef.current) {
+      jointHelpersRef.current.visible = showJoints;
+    }
+  }, [showJoints]);
 
   // Handle global rotation (Z-axis)
   useEffect(() => {
@@ -185,6 +195,46 @@ export function useGaussianViewer({
         // Ensure meshes are hidden/shown correctly after initial load
         syncMeshVisibility(meshVisible);
 
+        // 3. Create Joint Helpers
+        const jointHelpers = new THREE.Group();
+        jointHelpers.visible = showJoints;
+        jointHelpersRef.current = jointHelpers;
+        scene3D.add(jointHelpers);
+
+        Object.keys(robot.joints).forEach(name => {
+          const joint = robot.joints[name];
+          if (joint.jointType === 'fixed') return;
+
+          // Create a helper for the joint
+          // We'll use a cylinder to represent the joint axis
+          const isRevolute = joint.jointType === 'revolute' || joint.jointType === 'continuous';
+          const color = isRevolute ? 0xffea00 : 0x3b82f6; // Yellow or Blue
+          
+          const geometry = new THREE.CylinderGeometry(0.0075, 0.0075, 0.4, 8);
+          const material = new THREE.MeshBasicMaterial({ 
+            color, 
+            depthTest: false, // Make it visible through parts
+            transparent: true,
+            opacity: 0.6
+          });
+          const cylinder = new THREE.Mesh(geometry, material);
+          cylinder.renderOrder = 999; // Render on top
+
+          // Align cylinder (default up is Y) with joint axis
+          const axis = joint.axis || new THREE.Vector3(1, 0, 0);
+          const quaternion = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), axis.clone().normalize());
+          cylinder.quaternion.copy(quaternion);
+
+          // Create a wrapper that we'll add to the joint helpers group
+          // but we want it to follow the joint's world position
+          const helperWrapper = new THREE.Group();
+          helperWrapper.add(cylinder);
+          jointHelpers.add(helperWrapper);
+
+          // Store reference to update position
+          (joint as any).helper = helperWrapper;
+        });
+
         Object.entries(initialJoints).forEach(([name, val]) => {
           if (robot.joints[name]) {
             const joint = robot.joints[name];
@@ -208,7 +258,21 @@ export function useGaussianViewer({
       renderer.setAnimationLoop(() => {
         if (!aborted) {
           // One more visibility sync just in case of lazy loading of meshes
-          if (robotRef.current) syncMeshVisibility(meshVisible);
+          if (robotRef.current) {
+            syncMeshVisibility(meshVisible);
+            
+            // Update joint helper positions
+            Object.values(robotRef.current.joints).forEach((joint: any) => {
+              if (joint.helper) {
+                const worldPos = new THREE.Vector3();
+                const worldQuat = new THREE.Quaternion();
+                joint.getWorldPosition(worldPos);
+                joint.getWorldQuaternion(worldQuat);
+                joint.helper.position.copy(worldPos);
+                joint.helper.quaternion.copy(worldQuat);
+              }
+            });
+          }
           renderer.render(scene3D, camera);
         }
       });
@@ -232,7 +296,7 @@ export function useGaussianViewer({
       renderer.dispose();
       while (container.firstChild) container.removeChild(container.firstChild);
     };
-  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility]);
+  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility, showJoints]);
 
   return { joints };
 }
