@@ -2,7 +2,8 @@ import { useEffect, useCallback, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SparkRenderer, SplatMesh } from '@sparkjsdev/spark';
 import URDFLoader from 'urdf-loader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+// @ts-ignore
+import { OrbitControls } from 'three/addons/controls/OrbitControls';
 import type { SceneConfig, SplatLoadState } from '../types';
 import yaml from 'js-yaml';
 
