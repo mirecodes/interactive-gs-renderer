@@ -201,6 +201,15 @@ export function useGaussianViewer({
         jointHelpersRef.current = jointHelpers;
         scene3D.add(jointHelpers);
 
+        // Calculate bounding box to scale joint helpers
+        robot.updateMatrixWorld(true);
+        const box = new THREE.Box3().setFromObject(robot);
+        const size = new THREE.Vector3();
+        box.getSize(size);
+        const maxDim = Math.max(size.x, size.y, size.z);
+        // Use a reasonable heuristic: scale proportional to max dimension, but clamped
+        const helperScale = maxDim > 0 ? maxDim : 1.0;
+
         Object.keys(robot.joints).forEach(name => {
           const joint = robot.joints[name];
           if (joint.jointType === 'fixed') return;
@@ -210,7 +219,9 @@ export function useGaussianViewer({
           const isRevolute = joint.jointType === 'revolute' || joint.jointType === 'continuous';
           const color = isRevolute ? 0xffea00 : 0x3b82f6; // Yellow or Blue
           
-          const geometry = new THREE.CylinderGeometry(0.0075, 0.0075, 0.4, 8);
+          const radius = 0.0075 * helperScale;
+          const length = 0.4 * helperScale;
+          const geometry = new THREE.CylinderGeometry(radius, radius, length, 8);
           const material = new THREE.MeshBasicMaterial({ 
             color, 
             depthTest: false, // Make it visible through parts
