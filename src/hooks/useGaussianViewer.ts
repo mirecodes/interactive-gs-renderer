@@ -1,34 +1,78 @@
-import { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SparkRenderer, SplatMesh } from '@sparkjsdev/spark';
 import URDFLoader from 'urdf-loader';
 import type { SceneConfig, SplatLoadState } from '../types';
 import yaml from 'js-yaml';
 
+interface JointInfo {
+  name: string;
+  type: string;
+  min: number;
+  max: number;
+  value: number;
+}
+
 interface UseGaussianViewerOptions {
   containerRef: React.RefObject<HTMLDivElement | null>;
   scene: SceneConfig | null;
   onLoadStateChange: (states: SplatLoadState[]) => void;
+  meshVisible: boolean;
+  globalRotation: number;
+  jointValues: Record<string, number>;
 }
 
 export function useGaussianViewer({
   containerRef,
   scene,
   onLoadStateChange,
+  meshVisible,
+  globalRotation,
+  jointValues,
 }: UseGaussianViewerOptions) {
   const robotRef = useRef<any>(null);
+  const [joints, setJoints] = useState<JointInfo[]>([]);
 
-  const setJointValue = useCallback((jointName: string, value: number) => {
-    if (robotRef.current && robotRef.current.joints[jointName]) {
-      const joint = robotRef.current.joints[jointName];
-      // Convert degrees to radians for revolute joints
-      const radians = (joint.jointType === 'revolute' || joint.jointType === 'continuous') 
-        ? value * (Math.PI / 180) 
-        : value;
-      robotRef.current.setJointValue(jointName, radians);
-      robotRef.current.updateMatrixWorld(true);
+  // Function to sync visibility across all meshes
+  const syncMeshVisibility = useCallback((visible: boolean) => {
+    if (robotRef.current) {
+      robotRef.current.traverse((obj: any) => {
+        // Spark.js SplatMesh usually isn't a standard THREE.Mesh, 
+        // but we check isSplatMesh to be safe.
+        if (obj.isMesh && !obj.isSplatMesh) {
+          obj.visible = visible;
+        }
+      });
     }
   }, []);
+
+  // Update visibility when toggle changes
+  useEffect(() => {
+    syncMeshVisibility(meshVisible);
+  }, [meshVisible, syncMeshVisibility]);
+
+  // Handle global rotation (Z-axis)
+  useEffect(() => {
+    if (robotRef.current) {
+      robotRef.current.rotation.z = globalRotation * (Math.PI / 180);
+    }
+  }, [globalRotation]);
+
+  // Handle joint updates
+  useEffect(() => {
+    if (robotRef.current) {
+      Object.entries(jointValues).forEach(([name, val]) => {
+        if (robotRef.current.joints[name]) {
+          const joint = robotRef.current.joints[name];
+          const radians = (joint.jointType === 'revolute' || joint.jointType === 'continuous') 
+            ? val * (Math.PI / 180) 
+            : val;
+          robotRef.current.setJointValue(name, radians);
+        }
+      });
+      robotRef.current.updateMatrixWorld(true);
+    }
+  }, [jointValues]);
 
   useEffect(() => {
     if (!containerRef.current || !scene) return;
@@ -48,11 +92,9 @@ export function useGaussianViewer({
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
-    // 2. Setup Spark Renderer
     const spark = new SparkRenderer({ renderer });
     scene3D.add(spark);
 
-    // Initial Load States
     const loadStates: SplatLoadState[] = scene.gaussians.map((g) => ({
       gaussianId: g.id,
       label: g.label,
@@ -62,7 +104,6 @@ export function useGaussianViewer({
     onLoadStateChange([...loadStates]);
 
     const initScene = async () => {
-      // 3. Fetch configs.yml
       let cameraPos = new THREE.Vector3(-3, 3, 3);
       let initialJoints: Record<string, number> = {};
       
@@ -83,7 +124,6 @@ export function useGaussianViewer({
 
       if (aborted) return;
 
-      // 4. Load URDF
       const loader = new URDFLoader();
       const urdfPath = `/data/${scene.path}/urdf/object.urdf`;
       
@@ -96,11 +136,23 @@ export function useGaussianViewer({
         robotRef.current = robot;
         scene3D.add(robot);
 
-        // [IMPORTANT] First, set robot to zero pose to calculate the reconstruction offset
-        Object.keys(robot.joints).forEach(j => robot.setJointValue(j, 0));
+        const discoveredJoints: JointInfo[] = [];
+        Object.keys(robot.joints).forEach(name => {
+          const joint = robot.joints[name];
+          if (joint.jointType !== 'fixed') {
+            discoveredJoints.push({
+              name,
+              type: joint.jointType,
+              min: joint.limit ? (joint.jointType === 'revolute' ? joint.limit.lower * (180 / Math.PI) : joint.limit.lower) : -180,
+              max: joint.limit ? (joint.jointType === 'revolute' ? joint.limit.upper * (180 / Math.PI) : joint.limit.upper) : 180,
+              value: initialJoints[name] ?? 0,
+            });
+          }
+        });
+        setJoints(discoveredJoints);
+
         robot.updateMatrixWorld(true);
 
-        // 5. Attach SplatMesh to URDF Links
         const basePath = `/data/${scene.path}/gaussian`;
 
         Object.keys(robot.links).forEach((linkName) => {
@@ -119,17 +171,10 @@ export function useGaussianViewer({
             const g = scene.gaussians[gaussianIndex];
             const splatURL = `${basePath}/${g.file.replace('.ply', '.splat')}`;
             const splatMesh = new SplatMesh({ url: splatURL });
-            
-            // Hide original meshes
-            link.traverse((c: any) => { if (c.isMesh) c.visible = false; });
+            (splatMesh as any).isSplatMesh = true;
 
-            // [FIX] Coordinate Alignment
-            // The Gaussian splats are assumed to be in the "World" reconstruction space.
-            // To make them move with the URDF links, we must calculate their local position 
-            // relative to the link at the current (zero) pose.
             const inverseWorldMatrix = new THREE.Matrix4().copy(link.matrixWorld).invert();
             splatMesh.applyMatrix4(inverseWorldMatrix);
-            
             link.add(splatMesh);
 
             loadStates[gaussianIndex] = { ...loadStates[gaussianIndex], status: 'loaded', progress: 100 };
@@ -137,13 +182,20 @@ export function useGaussianViewer({
           }
         });
 
-        // 6. Apply target joint values after attachment
+        // Ensure meshes are hidden/shown correctly after initial load
+        syncMeshVisibility(meshVisible);
+
         Object.entries(initialJoints).forEach(([name, val]) => {
-          setJointValue(name, val);
+          if (robot.joints[name]) {
+            const joint = robot.joints[name];
+            const radians = (joint.jointType === 'revolute' || joint.jointType === 'continuous') 
+              ? val * (Math.PI / 180) 
+              : val;
+            robot.setJointValue(name, radians);
+          }
         });
         robot.updateMatrixWorld(true);
 
-        // Set camera
         camera.position.copy(cameraPos);
         camera.up.set(0, 1, 0);
         camera.lookAt(0, 0, 0);
@@ -153,9 +205,12 @@ export function useGaussianViewer({
         if (!aborted) onLoadStateChange(loadStates.map(s => ({ ...s, status: 'error', errorMsg: String(err) })));
       }
 
-      // 7. Animation loop
       renderer.setAnimationLoop(() => {
-        if (!aborted) renderer.render(scene3D, camera);
+        if (!aborted) {
+          // One more visibility sync just in case of lazy loading of meshes
+          if (robotRef.current) syncMeshVisibility(meshVisible);
+          renderer.render(scene3D, camera);
+        }
       });
     };
 
@@ -177,7 +232,7 @@ export function useGaussianViewer({
       renderer.dispose();
       while (container.firstChild) container.removeChild(container.firstChild);
     };
-  }, [scene, containerRef, onLoadStateChange, setJointValue]);
+  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility]);
 
-  return { setJointValue };
+  return { joints };
 }
