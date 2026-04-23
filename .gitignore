@@ -24,8 +24,11 @@ dist-ssr
 *.sw?
 
 # Data
-/data/
-public/data/ours/
+# /data/
+# public/data/ours/
 public/scripts
-*.ply
-*.splat
+public/data/aa
+public/data/gt
+# *.ply
+# *.splat
+

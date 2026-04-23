@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="object">
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0.442213099" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.442213099" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.197543814 -0.0393582574 0.458376354" rpy="0 0 0" />
+      <mass value="976.575248" />
+      <inertia ixx="265.132926" ixy="-45.4188641" ixz="-0.0677400685" iyy="191.41265" iyz="0.067343344" izz="291.763645" />
+    </inertial>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin xyz="0.55257424 -0.647134065 -0.0156274979" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.55257424 -0.647134065 -0.0156274979" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.372601471 -0.356756921 -0.00151320252" rpy="0 0 0" />
+      <mass value="33.3797183" />
+      <inertia ixx="4.89775552" ixy="-1.69836703" ixz="0.00480350739" iyy="5.01910431" iyz="0.00395458892" izz="3.4331933" />
+    </inertial>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <parent link="link_1" />
+    <child link="link_2" />
+    <origin xyz="-0.55257424 0.647134065 0.457840597" rpy="0 0 0" />
+    <axis xyz="0.00310061246 -0.00671197532 -0.999972667" />
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0" />
+  </joint>
+  <joint name="base_to_1" type="fixed">
+    <parent link="base" />
+    <child link="link_1" />
+    <origin xyz="0 0 -0.442213099" rpy="0 0 0" />
+  </joint>
+</robot>

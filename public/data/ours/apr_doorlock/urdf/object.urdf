@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="object">
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.293462929 0.183248861 0.0683127227" rpy="0 0 0" />
+      <mass value="127.508011" />
+      <inertia ixx="3.50075487" ixy="0.0912369358" ixz="0.568852342" iyy="61.8811276" iyz="-0.0976509091" izz="66.0044457" />
+    </inertial>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin xyz="0.688717601 -0.193855408 -0.279869482" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0.688717601 -0.193855408 -0.279869482" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.0105558523 0.388025103 0.161235861" rpy="0 0 0" />
+      <mass value="18.151075" />
+      <inertia ixx="1.81117878" ixy="0.0495751614" ixz="-0.0208276433" iyy="0.148163195" iyz="0.143420828" izz="1.82349905" />
+    </inertial>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <parent link="link_1" />
+    <child link="link_2" />
+    <origin xyz="-0.688717601 0.193855408 0.279869482" rpy="0 0 0" />
+    <axis xyz="-0.00328518334 -0.0618461827 -0.998080286" />
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0" />
+  </joint>
+  <joint name="base_to_1" type="fixed">
+    <parent link="base" />
+    <child link="link_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+</robot>

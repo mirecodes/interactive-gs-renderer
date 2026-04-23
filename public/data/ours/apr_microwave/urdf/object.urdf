@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="object">
+  <link name="base">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <mass value="0.0" />
+      <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+    </inertial>
+  </link>
+  <link name="link_1">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_1.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="-0.504920726 0.151231355 1.30022528" rpy="0 0 0" />
+      <mass value="274.493634" />
+      <inertia ixx="60868.3645" ixy="-215.068126" ixz="1961.98202" iyy="60784.0338" iyz="1314.65225" izz="228.796195" />
+    </inertial>
+  </link>
+  <link name="link_2">
+    <visual>
+      <origin xyz="-0.576412832 0.823526739 -0.128696786" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-0.576412832 0.823526739 -0.128696786" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="meshes/link_2.stl" />
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0.371757755 0.506333817 0.0983040789" rpy="0 0 0" />
+      <mass value="376.09841" />
+      <inertia ixx="9.75165764" ixy="0.996373585" ixz="7.54375032" iyy="19.5672453" iyz="-6.18604951" izz="20.4918094" />
+    </inertial>
+  </link>
+  <joint name="joint_1_2" type="revolute">
+    <parent link="link_1" />
+    <child link="link_2" />
+    <origin xyz="0.576412832 -0.823526739 0.128696786" rpy="0 0 0" />
+    <axis xyz="-0.00887674338 -0.0142595603 0.999858924" />
+    <limit lower="-1.57" upper="1.57" effort="10.0" velocity="1.0" />
+  </joint>
+  <joint name="base_to_1" type="fixed">
+    <parent link="base" />
+    <child link="link_1" />
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </joint>
+</robot>
