@@ -2,6 +2,7 @@ import { useEffect, useCallback, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { SparkRenderer, SplatMesh } from '@sparkjsdev/spark';
 import URDFLoader from 'urdf-loader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import type { SceneConfig, SplatLoadState } from '../types';
 import yaml from 'js-yaml';
 
@@ -21,6 +22,7 @@ interface UseGaussianViewerOptions {
   globalRotation: number;
   jointValues: Record<string, number>;
   showJoints: boolean;
+  showGrid: boolean;
 }
 
 export function useGaussianViewer({
@@ -31,9 +33,11 @@ export function useGaussianViewer({
   globalRotation,
   jointValues,
   showJoints,
+  showGrid,
 }: UseGaussianViewerOptions) {
   const robotRef = useRef<any>(null);
   const jointHelpersRef = useRef<THREE.Group | null>(null);
+  const gridRef = useRef<THREE.GridHelper | null>(null);
   const [joints, setJoints] = useState<JointInfo[]>([]);
 
   // Function to sync visibility across all meshes
@@ -60,6 +64,13 @@ export function useGaussianViewer({
       jointHelpersRef.current.visible = showJoints;
     }
   }, [showJoints]);
+
+  // Update grid visibility
+  useEffect(() => {
+    if (gridRef.current) {
+      gridRef.current.visible = showGrid;
+    }
+  }, [showGrid]);
 
   // Handle global rotation (Z-axis)
   useEffect(() => {
@@ -97,13 +108,65 @@ export function useGaussianViewer({
     scene3D.background = new THREE.Color(0x0a0a0a);
 
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.01, 1000);
+    camera.up.set(0, 0, 1); // Set Z-up before OrbitControls
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(window.devicePixelRatio);
     container.appendChild(renderer.domElement);
 
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+
     const spark = new SparkRenderer({ renderer });
     scene3D.add(spark);
+
+    // 1.5. Setup View Gizmo (Corner Cube)
+    const gizmoSize = 120;
+    const gizmoScene = new THREE.Scene();
+    const gizmoCamera = new THREE.PerspectiveCamera(50, 1, 0.1, 10);
+    gizmoCamera.up.set(0, 0, 1);
+    gizmoCamera.position.set(0, 0, 3);
+
+    // Create a cube with semi-transparent gray faces and axis labels
+    const createFaceTexture = (text: string, color: string) => {
+      const canvas = document.createElement('canvas');
+      canvas.width = 128;
+      canvas.height = 128;
+      const ctx = canvas.getContext('2d')!;
+      ctx.fillStyle = 'rgba(40, 44, 52, 0.7)';
+      ctx.fillRect(0, 0, 128, 128);
+      ctx.strokeStyle = color;
+      ctx.lineWidth = 16;
+      ctx.strokeRect(0, 0, 128, 128);
+      ctx.fillStyle = 'white';
+      ctx.font = 'bold 54px Inter, sans-serif';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(text, 64, 64);
+      return new THREE.CanvasTexture(canvas);
+    };
+
+    const cubeGeom = new THREE.BoxGeometry(1, 1, 1);
+    const materials = [
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('X+', '#ff3b30'), transparent: true }), // iOS-style Red
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('X-', '#ff3b30'), transparent: true }),
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('Y+', '#34c759'), transparent: true }), // iOS-style Green
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('Y-', '#34c759'), transparent: true }),
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('Z+', '#007aff'), transparent: true }), // iOS-style Blue
+      new THREE.MeshBasicMaterial({ map: createFaceTexture('Z-', '#007aff'), transparent: true }),
+    ];
+    const gizmoCube = new THREE.Mesh(cubeGeom, materials);
+    gizmoScene.add(gizmoCube);
+
+    // Subtle axis lines
+    const axesHelper = new THREE.AxesHelper(1.0);
+    gizmoScene.add(axesHelper);
+
+    const grid = new THREE.GridHelper(20, 20, 0x444444, 0x222222);
+    grid.rotation.x = Math.PI / 2;
+    grid.visible = showGrid;
+    gridRef.current = grid;
+    scene3D.add(grid);
 
     const loadStates: SplatLoadState[] = scene.gaussians.map((g) => ({
       gaussianId: g.id,
@@ -258,8 +321,8 @@ export function useGaussianViewer({
         robot.updateMatrixWorld(true);
 
         camera.position.copy(cameraPos);
-        camera.up.set(0, 1, 0);
         camera.lookAt(0, 0, 0);
+        controls.update();
 
       } catch (err) {
         console.error('Failed to load URDF or Splats:', err);
@@ -284,7 +347,29 @@ export function useGaussianViewer({
               }
             });
           }
+          controls.update();
+
+          // Render Main Scene
+          const size = new THREE.Vector2();
+          renderer.getSize(size);
+          const currentWidth = size.width;
+          const currentHeight = size.height;
+
+          renderer.setViewport(0, 0, currentWidth, currentHeight);
+          renderer.setScissorTest(false);
           renderer.render(scene3D, camera);
+
+          // Render Gizmo Scene in Corner
+          const padding = 20;
+          renderer.setScissorTest(true);
+          renderer.setScissor(currentWidth - gizmoSize - padding, padding, gizmoSize, gizmoSize);
+          renderer.setViewport(currentWidth - gizmoSize - padding, padding, gizmoSize, gizmoSize);
+          
+          // Sync gizmo camera orientation
+          gizmoCamera.position.copy(camera.position).sub(controls.target).normalize().multiplyScalar(3);
+          gizmoCamera.lookAt(0, 0, 0);
+          
+          renderer.render(gizmoScene, gizmoCamera);
         }
       });
     };
@@ -307,7 +392,7 @@ export function useGaussianViewer({
       renderer.dispose();
       while (container.firstChild) container.removeChild(container.firstChild);
     };
-  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility, showJoints]);
+  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility, showJoints, showGrid]);
 
   return { joints };
 }
