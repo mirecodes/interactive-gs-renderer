@@ -1,0 +1,134 @@
+.loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 8, 16, 0.85);
+  backdrop-filter: blur(12px);
+  z-index: 100;
+  animation: overlay-fade-in 0.3s ease;
+}
+
+@keyframes overlay-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.loading-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 36px 40px;
+  min-width: 340px;
+  max-width: 480px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+}
+
+.loading-logo {
+  animation: logo-spin 4s linear infinite;
+  filter: drop-shadow(0 0 16px rgba(167, 139, 250, 0.6));
+}
+
+@keyframes logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.loading-error-hint {
+  font-size: 0.78rem;
+  color: #f87171;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.loading-error-hint code {
+  background: rgba(248, 113, 113, 0.15);
+  border-radius: 4px;
+  padding: 0 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.loading-items {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.loading-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.loading-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loading-item-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: 0.01em;
+}
+
+.loading-item-status {
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.status-loading { color: #a78bfa; }
+.status-loaded  { color: #4ade80; }
+.status-error   { color: #f87171; }
+.status-idle    { color: rgba(255,255,255,0.3); }
+
+.loading-bar-track {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.fill-loading {
+  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+}
+
+.fill-loaded {
+  background: linear-gradient(90deg, #4ade80, #22d3ee);
+  width: 100% !important;
+}
+
+.fill-error {
+  background: #f87171;
+}
+
+.loading-error-msg {
+  font-size: 0.72rem;
+  color: #fca5a5;
+  margin: 0;
+  line-height: 1.4;
+}

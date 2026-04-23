@@ -1,0 +1,526 @@
+{
+  "scenes": [
+    {
+      "id": "apr_diffuser",
+      "name": "Apr Diffuser",
+      "description": "apr_diffuser scene",
+      "path": "ours/apr_diffuser",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "apr_doorlock",
+      "name": "Apr Doorlock",
+      "description": "apr_doorlock scene",
+      "path": "ours/apr_doorlock",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "apr_extinguisher",
+      "name": "Apr Extinguisher",
+      "description": "apr_extinguisher scene",
+      "path": "ours/apr_extinguisher",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "apr_gum",
+      "name": "Apr Gum",
+      "description": "apr_gum scene",
+      "path": "ours/apr_gum",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "apr_lamp",
+      "name": "Apr Lamp",
+      "description": "apr_lamp scene",
+      "path": "ours/apr_lamp",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "apr_laptop",
+      "name": "Apr Laptop",
+      "description": "apr_laptop scene",
+      "path": "ours/apr_laptop",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "apr_microwave",
+      "name": "Apr Microwave",
+      "description": "apr_microwave scene",
+      "path": "ours/apr_microwave",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "apr_shaker",
+      "name": "Apr Shaker",
+      "description": "apr_shaker scene",
+      "path": "ours/apr_shaker",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "name": "Box",
+      "description": "box scene",
+      "path": "ours/box",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        },
+        {
+          "id": 4,
+          "file": "gaussian_4.ply",
+          "label": "Part 4"
+        },
+        {
+          "id": 5,
+          "file": "gaussian_5.ply",
+          "label": "Part 5"
+        }
+      ]
+    },
+    {
+      "id": "bucket",
+      "name": "Bucket",
+      "description": "bucket scene",
+      "path": "ours/bucket",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "dispenser",
+      "name": "Dispenser",
+      "description": "dispenser scene",
+      "path": "ours/dispenser",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        },
+        {
+          "id": 4,
+          "file": "gaussian_4.ply",
+          "label": "Part 4"
+        }
+      ]
+    },
+    {
+      "id": "fan",
+      "name": "Fan",
+      "description": "fan scene",
+      "path": "ours/fan",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "faucet",
+      "name": "Faucet",
+      "description": "faucet scene",
+      "path": "ours/faucet",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        },
+        {
+          "id": 4,
+          "file": "gaussian_4.ply",
+          "label": "Part 4"
+        }
+      ]
+    },
+    {
+      "id": "folding_chair",
+      "name": "Folding Chair",
+      "description": "folding_chair scene",
+      "path": "ours/folding_chair",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "globe",
+      "name": "Globe",
+      "description": "globe scene",
+      "path": "ours/globe",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "lamp",
+      "name": "Lamp",
+      "description": "lamp scene",
+      "path": "ours/lamp",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        },
+        {
+          "id": 4,
+          "file": "gaussian_4.ply",
+          "label": "Part 4"
+        }
+      ]
+    },
+    {
+      "id": "microwave",
+      "name": "Microwave",
+      "description": "microwave scene",
+      "path": "ours/microwave",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "refrigerator",
+      "name": "Refrigerator",
+      "description": "refrigerator scene",
+      "path": "ours/refrigerator",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "safe",
+      "name": "Safe",
+      "description": "safe scene",
+      "path": "ours/safe",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "stapler",
+      "name": "Stapler",
+      "description": "stapler scene",
+      "path": "ours/stapler",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        }
+      ]
+    },
+    {
+      "id": "toaster",
+      "name": "Toaster",
+      "description": "toaster scene",
+      "path": "ours/toaster",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "toilet",
+      "name": "Toilet",
+      "description": "toilet scene",
+      "path": "ours/toilet",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        },
+        {
+          "id": 3,
+          "file": "gaussian_3.ply",
+          "label": "Part 3"
+        },
+        {
+          "id": 4,
+          "file": "gaussian_4.ply",
+          "label": "Part 4"
+        }
+      ]
+    },
+    {
+      "id": "trashcan",
+      "name": "Trashcan",
+      "description": "trashcan scene",
+      "path": "ours/trashcan",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    },
+    {
+      "id": "usb",
+      "name": "Usb",
+      "description": "usb scene",
+      "path": "ours/usb",
+      "gaussians": [
+        {
+          "id": 1,
+          "file": "gaussian_1.ply",
+          "label": "Part 1"
+        },
+        {
+          "id": 2,
+          "file": "gaussian_2.ply",
+          "label": "Part 2"
+        }
+      ]
+    }
+  ]
+}

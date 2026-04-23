@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<robot  name="spray_bottle" >
+ <link  name="base" />
+ <link  name="bottle_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="fixed"  name="base_to_bottle_body" >
+  <parent  link="base" />
+  <child  link="bottle_body" />
+  <origin  xyz="0 0 0"  rpy="1.5707963267948961 0.0 1.5707963267948961" />
+ </joint>
+ <link  name="lid" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/3398/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="-0.055550001561641575 -0.9776809730529787 0.38594099068641663"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="revolute"  name="bottle_body_to_lid" >
+  <parent  link="bottle_body" />
+  <child  link="lid" />
+  <axis  xyz="-1.0 0.0 4.440892098500626e-16" />
+  <limit  velocity="5"  upper="0.7853981633974483"  effort="5"  lower="0.0" />
+  <origin  xyz="0.055550001561641575 1.0175499577522282 -0.38594099068641663" />
+ </joint>
+</robot>

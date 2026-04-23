@@ -1,0 +1,579 @@
+# A1: Microwave
+microwave:
+ gt:
+   urdf_path: "../data/gt/microwave/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 60
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/microwave/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     microwave_body_to_door: -30
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "microwave_body_to_door": 1.0
+ ours:
+   urdf_path: "../data/ours/microwave/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": -1.0
+
+# A2: Bucket
+bucket:
+ gt:
+   urdf_path: "../data/gt/bucket/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 135
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/bucket/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     bucket_body_to_handle: -135
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "bucket_body_to_handle": 1.0
+ ours:
+   urdf_path: "../data/ours/bucket/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: -15
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": -1.0
+
+# A3: Trashcan
+trashcan:
+ gt:
+   urdf_path: "../data/gt/trashcan/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 0.2
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/trashcan/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     trashcan_body_to_cover_lid: 0.2
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "trashcan_body_to_cover_lid": 1.0
+ ours:
+   urdf_path: "../data/ours/trashcan/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: -0.2
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": -1.0
+
+# A4: Fan
+fan:
+ gt:
+   urdf_path: "../data/gt/fan/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/fan/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     fan_frame_to_rotor: 37.5
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "fan_frame_to_rotor": -1.0
+ ours:
+   urdf_path: "../data/ours/fan/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": 1.0
+
+# A5: Globe
+globe:
+ gt:
+   urdf_path: "../data/gt/globe/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 90
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/globe/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     globe_frame_to_sphere: -90
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "globe_frame_to_sphere": -1.0
+ ours:
+   urdf_path: "../data/ours/globe/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: 90
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": 1.0
+
+ # A6: USB
+usb:
+ gt:
+   urdf_path: "../data/gt/usb/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+ aa:
+   urdf_path: "../data/aa/usb/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     camera_body_to_lens: 0
+   camera_pos: [-3.0, -3.0, 3.0]
+   joint_direction_override:
+     "camera_body_to_lens": 1.0
+ ours:
+   urdf_path: "../data/ours/usb/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: -0.132
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": 1
+
+
+# B1: toilet
+toilet:
+ gt:
+   urdf_path: "../data/gt/toilet/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 45
+     joint_1: 75
+     joint_2: 60
+     joint_3: 0.15
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+     "joint_1": 1.0
+     "joint_2": 1.0
+     "joint_3": 1.0
+ aa:
+   urdf_path: "../data/aa/toilet/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     seat_to_lid: -15
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "seat_to_lid": 1.0
+ ours:
+   urdf_path: "../data/ours/toilet/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_3: -15
+     joint_1_2: -30
+     joint_1_4: -0.15
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_3": -1.0
+     "joint_1_2": -1.0
+     "joint_1_4": -1.0
+
+# B2: faucet
+faucet:
+ gt:
+   urdf_path: "../data/gt/faucet/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 0
+     joint_1: 45
+     joint_3: 45
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+     "joint_1": 1.0
+     "joint_3": 1.0
+ aa:
+   urdf_path: "../data/aa/faucet/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     faucet_base_to_spout: 45
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "faucet_base_to_spout": 1.0
+ ours:
+   urdf_path: "../data/ours/faucet/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: 45
+     joint_1_3: 0
+     joint_1_4: 135
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": -1.0
+     "joint_1_3": -1.0
+     "joint_1_4": 1.0
+
+ # B3: folding_chair
+folding_chair:
+ gt:
+   urdf_path: "../data/gt/folding_chair/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 30
+     joint_2: 30
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+     "joint_2": 1.0
+ aa:
+   urdf_path: "../data/aa/folding_chair/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     chair_leg_to_seat: 30
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "chair_leg_to_seat": 1.0
+ ours:
+   urdf_path: "../data/ours/folding_chair/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_3_2: 60
+     joint_1_3: -30
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_3_2": 1.0
+     "joint_1_3": 1.0
+
+# B4: box
+box:
+ gt:
+   urdf_path: "../data/gt/box/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 45
+     joint_1: 90
+     joint_2: 90
+     joint_3: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+     "joint_1": 1.0
+     "joint_2": 1.0
+     "joint_3": 1.0
+ aa:
+   urdf_path: "../data/aa/box/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     box_body_to_lid: 90
+     box_body_to_lid_2: 45
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "box_body_to_lid": 1.0
+     "box_body_to_lid2": 1.0
+ ours:
+   urdf_path: "../data/ours/box/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_5: 45
+     joint_1_2: 90
+     joint_1_3: -90
+     joint_1_4: 0
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_5": 1.0
+     "joint_1_2": 1.0
+     "joint_1_3": -1.0
+     "joint_1_4": -1.0
+
+# B5: Refrigerator
+refrigerator:
+ gt:
+   urdf_path: "../data/gt/refrigerator/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1: 60
+     joint_2: 90
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1": 1.0
+     "joint_2": 1.0
+ aa:
+   urdf_path: "../data/aa/refrigerator/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     furniture_body_to_door: 60
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "furniture_body_to_door": 1.0
+ ours:
+   urdf_path: "../data/ours/refrigerator/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_2: -15
+     joint_1_3: 45
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_2": 1.0
+     "joint_1_3": -1.0
+
+# B6: Toaster
+toaster:
+ gt:
+   urdf_path: "../data/gt/toaster/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_0: 45
+     joint_1: 0.2
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_0": 1.0
+     "joint_1": 1.0
+ aa:
+   urdf_path: "../data/aa/toaster/mobility.urdf"
+   fixed_frame: "base"
+   joint_values:
+     toaster_body_to_slider: 0.2
+   camera_pos: [3.0, -3.0, 3.0]
+   joint_direction_override:
+     "toaster_body_to_slider": 1.0
+ ours:
+   urdf_path: "../data/ours/toaster/urdf/object.urdf"
+   fixed_frame: "base"
+   joint_values:
+     joint_1_3: 45
+     joint_1_2: 0.2
+   camera_pos: [-3.0, 3.0, 3.0]
+   joint_direction_override:
+     "joint_1_3": -1.0
+     "joint_1_2": 1.0
+
+
+# C1: Lamp
+lamp:
+  gt:
+    urdf_path: "../data/gt/lamp/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_1: 60
+      joint_2: -30
+      joint_3: 0
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_1": 1.0
+      "joint_2": -1.0
+      "joint_3": 1.0
+  aa:
+    urdf_path: "../data/aa/lamp/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      bar_4_to_head: 60
+    camera_pos: [-3.0, -3.0, 3.0]
+    joint_direction_override:
+      "bar_4_to_head": 1.0
+  ours:
+    urdf_path: "../data/ours/lamp/urdf/object.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_3_4: 60
+      joint_2_3: -30
+      joint_1_2: 0
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_3_4": 1.0
+      "joint_2_3": -1.0
+      "joint_1_2": -1.0
+
+# C2: dispenser
+dispenser:
+  gt:
+    urdf_path: "../data/gt/dispenser/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_0: 0
+      joint_2: 30
+      joint_3: 0.2
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_0": -1.0
+      "joint_2": 1.0
+      "joint_3": 1.0
+  aa:
+    urdf_path: "../data/aa/dispenser/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      bottle_body_to_lid: 30
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "bottle_body_to_lid": 1.0
+  ours:
+    urdf_path: "../data/ours/dispenser/urdf/object.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_3_4: 0
+      joint_1_2: -30
+      joint_2_3: -0.2
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_3_4": -1.0
+      "joint_1_2": -1.0
+      "joint_2_3": -1.0
+
+# C3: safe
+safe:
+  gt:
+    urdf_path: "../data/gt/safe/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_0: -30
+      joint_1: 45
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_0": 1.0
+      "joint_1": 1.0
+  aa:
+    urdf_path: "../data/aa/safe/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      safe_body_to_door: 30
+    camera_pos: [3.0, -3.0, 3.0]
+    joint_direction_override:
+      "safe_body_to_door": 1.0
+  ours:
+    urdf_path: "../data/ours/safe/urdf/object.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_1_2: -30
+      joint_2_3: 45
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_1_2": 1.0
+      "joint_2_3": 1.0
+
+# C4: stapler
+stapler:
+  gt:
+    urdf_path: "../data/gt/stapler/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_0: 30
+      joint_1: 60
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_0": -1.0
+      "joint_1": 1.0
+  aa:
+    urdf_path: "../data/aa/stapler/mobility.urdf"
+    fixed_frame: "base"
+    joint_values:
+      stapler_body_to_lid: -60
+    camera_pos: [3.0, -3.0, 3.0]
+    joint_direction_override:
+      "stapler_body_to_lid": 1.0
+  ours:
+    urdf_path: "../data/ours/stapler/urdf/object.urdf"
+    fixed_frame: "base"
+    joint_values:
+      joint_2_3: -15
+      joint_1_2: 30
+    camera_pos: [-3.0, 3.0, 3.0]
+    joint_direction_override:
+      "joint_2_3": -1.0
+      "joint_1_2": -1.0
+
+
+# Real Objects
+
+# R1: apr_diffuser
+apr_diffuser:
+  ours:
+    urdf_path: "../data/ours/apr_diffuser/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 1.5]
+    # joint_direction_override:
+    camera_look_at: [0.0, 0.0, 0.5]
+
+# R2: apr_doorlock
+apr_doorlock:
+  ours:
+    urdf_path: "../data/ours/apr_doorlock/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 5.0]
+    # joint_direction_override:
+
+# R3: apr_extinguisher
+apr_extinguisher:
+  ours:
+    urdf_path: "../data/ours/apr_extinguisher/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 5.0]
+    # joint_direction_override:
+
+# R4: apr_lamp
+apr_lamp:
+  ours:
+    urdf_path: "../data/ours/apr_lamp/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 5.0]
+    # joint_direction_override:
+    #   "joint_1_2": 1.0
+    #   "joint_2_3": -1.0
+
+# R5: apr_gum
+apr_gum:
+  ours:
+    urdf_path: "../data/ours/apr_gum/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 2.0, 3.0]
+    # joint_direction_override:
+
+# R6: apr_laptop
+apr_laptop:
+  ours:
+    urdf_path: "../data/ours/apr_laptop/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 5.0]
+    # joint_direction_override:
+
+# R7: apr_microwave
+apr_microwave:
+  ours:
+    urdf_path: "../data/ours/apr_microwave/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 5.0, 3.0]
+    # joint_direction_override:
+
+# R8: apr_shaker
+apr_shaker:
+  ours:
+    urdf_path: "../data/ours/apr_shaker/urdf/object.urdf"
+    fixed_frame: "base"
+    # joint_values:
+    camera_pos: [0.0, 3.0, 5.0]
+    # joint_direction_override:

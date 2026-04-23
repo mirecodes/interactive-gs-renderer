@@ -1,0 +1,3 @@
+link_0 hinge seat
+link_1 free leg
+link_2 hinge leg

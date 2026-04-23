@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot  name="trashcan" >
+ <link  name="base" />
+ <link  name="trashcan_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-6.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-7.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-6.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-7.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="base_to_trashcan_body"  type="fixed" >
+  <parent  link="base" />
+  <child  link="trashcan_body" />
+  <origin  rpy="1.5707963267948961 0.0 1.5707963267948961"  xyz="0 0 0" />
+ </joint>
+ <link  name="cover_lid" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/11818/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="trashcan_body_to_cover_lid"  type="prismatic" >
+  <parent  link="trashcan_body" />
+  <child  link="cover_lid" />
+  <axis  xyz="0.0 1.0 4.440892098500626e-16" />
+  <limit  upper="0.10460399770736717"  effort="5"  lower="0"  velocity="5" />
+  <origin  xyz="0.0 -0.001999999999999549 -8.88178419699925e-19" />
+ </joint>
+</robot>

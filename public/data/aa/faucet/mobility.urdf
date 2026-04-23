@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<robot  name="faucet" >
+ <link  name="base" />
+ <link  name="faucet_base" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-10.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-9.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-10.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-9.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="fixed"  name="base_to_faucet_base" >
+  <parent  link="base" />
+  <child  link="faucet_base" />
+  <origin  xyz="0 0 0"  rpy="1.5707963267948961 0.0 1.5707963267948961" />
+ </joint>
+ <link  name="spout" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-8.obj" />
+   </geometry>
+   <origin  xyz="-0.0046609994024038315 0.223413995742798 -0.34355899691581704"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-7.obj" />
+   </geometry>
+   <origin  xyz="-0.0046609994024038315 0.223413995742798 -0.34355899691581704"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-8.obj" />
+   </geometry>
+   <origin  xyz="-0.0046609994024038315 0.223413995742798 -0.34355899691581704"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-7.obj" />
+   </geometry>
+   <origin  xyz="-0.0046609994024038315 0.223413995742798 -0.34355899691581704"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <link  name="switch" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="fixed"  name="faucet_base_to_switch" >
+  <parent  link="faucet_base" />
+  <child  link="switch" />
+  <origin  xyz="4.2379879050256387e-17 -4.2379879050256387e-17 0.09543100374937068" />
+ </joint>
+ <link  name="switch_2" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/167/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="fixed"  name="faucet_base_to_switch_2" >
+  <parent  link="faucet_base" />
+  <child  link="switch_2" />
+  <origin  xyz="8.234790793676219e-17 -8.234790793676219e-17 0.18543100374937105" />
+ </joint>
+ <joint  type="revolute"  name="faucet_base_to_spout" >
+  <parent  link="faucet_base" />
+  <child  link="spout" />
+  <axis  xyz="0.0 1.0 4.440892098500626e-16" />
+  <limit  velocity="5"  upper="3.141592653589793"  effort="5"  lower="0.0" />
+  <origin  xyz="0.0046609994024038315 -0.22541399574279788 0.34355899691581704" />
+ </joint>
+</robot>

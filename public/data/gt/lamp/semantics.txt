@@ -1,0 +1,4 @@
+link_0 free lamp_base
+link_1 hinge head
+link_2 hinge rotation_bar
+link_3 hinge rotation_bar

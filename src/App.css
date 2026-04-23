@@ -1,0 +1,89 @@
+.app {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #060610;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Error state */
+.app-error {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding: 40px;
+}
+
+.app-error-icon {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.app-error h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f87171;
+  margin: 0;
+}
+
+.app-error p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.app-error-hint {
+  font-size: 0.78rem !important;
+  color: rgba(255, 255, 255, 0.25) !important;
+}
+
+.app-error-hint code {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Placeholder while loading manifest */
+.app-placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.placeholder-icon {
+  font-size: 4rem;
+  animation: pulse 2s ease-in-out infinite;
+  background: linear-gradient(135deg, #a78bfa, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.95); }
+  50%       { opacity: 1;   transform: scale(1.05); }
+}
+
+.app-placeholder p {
+  font-size: 0.9rem;
+  margin: 0;
+}

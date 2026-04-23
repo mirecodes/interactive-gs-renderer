@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<robot  name="toaster" >
+ <link  name="base" />
+ <link  name="toaster_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="base_to_toaster_body"  type="fixed" >
+  <parent  link="base" />
+  <child  link="toaster_body" />
+  <origin  xyz="0 0 0"  rpy="1.5707963267948961 0.0 1.5707963267948961" />
+ </joint>
+ <link  name="knob" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="toaster_body_to_knob"  type="fixed" >
+  <parent  link="toaster_body" />
+  <child  link="knob" />
+  <origin  xyz="-1.3322676295498894e-18 1.3322676295498894e-18 -0.002999999999999328" />
+ </joint>
+ <link  name="slider" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-7.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/103469/textured_objs/original-7.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="knob_to_slider"  type="fixed" >
+  <parent  link="knob" />
+  <child  link="slider" />
+  <origin  xyz="0.0 -0.0760950026512146 -3.3792969600916314e-17" />
+ </joint>
+ <joint  name="toaster_body_to_slider"  type="prismatic" >
+  <parent  link="toaster_body" />
+  <child  link="slider" />
+  <axis  xyz="0.0 1.0 4.440892098500626e-16" />
+  <limit  velocity="5"  upper="0.05"  effort="5"  lower="0" />
+  <origin  xyz="0.0 -0.05 -2.2204460492503132e-17" />
+ </joint>
+</robot>

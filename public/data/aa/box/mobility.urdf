@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<robot  name="cardboard_box" >
+ <link  name="base" />
+ <link  name="box_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-26.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-26.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="fixed"  name="base_to_box_body" >
+  <parent  link="base" />
+  <child  link="box_body" />
+  <origin  xyz="0 0 0"  rpy="1.5707963267948961 0.0 1.5707963267948961" />
+ </joint>
+ <link  name="lid" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0.4176949946880342 -0.2791959853172302 0.7092969803810122"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0.4176949946880342 -0.2791959853172302 0.7092969803810122"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <link  name="lid_2" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="-0.4308090000152588 -0.2799090058803558 -0.42402901363372747"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/100129/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="-0.4308090000152588 -0.2799090058803558 -0.42402901363372747"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  type="revolute"  name="box_body_to_lid" >
+  <parent  link="box_body" />
+  <child  link="lid" />
+  <axis  xyz="4.440892098500626e-16 -4.440892098500626e-16 1.0" />
+  <limit  velocity="5"  upper="1.5707963267948966"  effort="5"  lower="0.0" />
+  <origin  xyz="-0.4176949946880342 0.27997900271415765 -0.7092969803810122" />
+ </joint>
+ <joint  type="revolute"  name="box_body_to_lid_2" >
+  <parent  link="box_body" />
+  <child  link="lid_2" />
+  <axis  xyz="-4.440892098500626e-16 4.440892098500626e-16 -1.0" />
+  <limit  velocity="5"  upper="1.5707963267948966"  effort="5"  lower="0.0" />
+  <origin  xyz="0.4308090000152588 0.27997900271415715 0.42402901363372747" />
+ </joint>
+</robot>

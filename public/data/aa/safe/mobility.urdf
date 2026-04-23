@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<robot  name="safe" >
+ <link  name="base" />
+ <link  name="safe_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-43.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-52.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-33.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-44.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-8.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-13.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-9.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-45.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-59.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-54.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-51.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-55.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-50.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-31.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-11.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-38.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-12.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-53.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-7.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-10.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-14.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-60.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-46.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-43.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-52.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-33.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-2.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-44.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-8.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-13.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-9.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-45.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-59.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-5.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-54.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-51.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-55.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-50.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-6.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-31.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-11.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-38.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-12.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-53.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-7.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-10.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-14.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-60.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-46.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="base_to_safe_body"  type="fixed" >
+  <parent  link="base" />
+  <child  link="safe_body" />
+  <origin  xyz="0 0 0"  rpy="1.5707963267948961 0.0 1.5707963267948961" />
+ </joint>
+ <link  name="door" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-16.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-58.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-57.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-56.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-49.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-48.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-47.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-15.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-17.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-19.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-18.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-24.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-22.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-23.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-28.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-27.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-25.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-21.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-20.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-16.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-58.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-57.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-56.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-49.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-48.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-47.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-15.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-17.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-19.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-18.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-24.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-22.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-23.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-28.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-27.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-25.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-21.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-20.obj" />
+   </geometry>
+   <origin  xyz="0.22205599331855808 0.47260998868942267 -0.2617479941844935"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <link  name="knob" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-30.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-32.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-30.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/101594/textured_objs/original-32.obj" />
+   </geometry>
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="door_to_knob"  type="fixed" >
+  <parent  link="door" />
+  <child  link="knob" />
+  <origin  xyz="7.727144882205968e-19 -7.727144882205968e-19 0.0017399983406070317" />
+ </joint>
+ <joint  name="safe_body_to_door"  type="revolute" >
+  <parent  link="safe_body" />
+  <child  link="door" />
+  <axis  xyz="0.0 -1.0 -4.440892098500626e-16" />
+  <limit  lower="0.0"  velocity="5"  effort="5"  upper="1.5707963267948966" />
+  <origin  xyz="-0.22205599331855794 -0.4726099886894228 0.543583983421326" />
+ </joint>
+</robot>

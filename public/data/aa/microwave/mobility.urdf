@@ -1,0 +1,765 @@
+<?xml version="1.0"?>
+<robot  name="microwave" >
+ <link  name="base" />
+ <link  name="microwave_body" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-12.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-49.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-51.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-50.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-12.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-49.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-51.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-50.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-2.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-1.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-0.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="base_to_microwave_body"  type="fixed" >
+  <parent  link="base" />
+  <child  link="microwave_body" />
+  <origin  rpy="1.5707963267948961 0.0 1.5707963267948961"  xyz="0 0 0" />
+ </joint>
+ <link  name="door" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-6.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-5.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-6.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/new-5.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-3.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-4.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0.6648939766883853 0.36893799090385443 -0.30287001347541764" />
+  </collision>
+ </link>
+ <link  name="tray" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-10.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-10.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_tray"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="tray" />
+  <origin  xyz="0.0 0.0 0.0" />
+ </joint>
+ <link  name="button" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-41.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-36.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-41.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-36.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button" />
+  <origin  xyz="-8.881784197000729e-19 8.881784197000729e-19 -0.001999999999999882" />
+ </joint>
+ <link  name="button_2" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-35.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-19.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-35.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-19.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_2"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_2" />
+  <origin  xyz="-8.881784197000482e-19 8.881784197000482e-19 -0.0019999999999998266" />
+ </joint>
+ <link  name="button_3" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-42.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-34.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-42.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-34.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_3"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_3" />
+  <origin  xyz="-8.881784197000482e-19 8.881784197000482e-19 -0.0019999999999998266" />
+ </joint>
+ <link  name="button_4" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-31.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-18.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-31.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-18.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_4"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_4" />
+  <origin  xyz="-8.881784197000482e-19 8.881784197000482e-19 -0.0019999999999998266" />
+ </joint>
+ <link  name="button_5" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-17.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-33.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-17.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-33.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_5"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_5" />
+  <origin  xyz="-8.881784197000482e-19 8.881784197000482e-19 -0.0019999999999998266" />
+ </joint>
+ <link  name="button_6" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-32.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-16.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-32.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-16.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_6"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_6" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_7" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-15.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-30.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-15.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-30.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_7"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_7" />
+  <origin  xyz="-8.881784197000482e-19 8.881784197000482e-19 -0.0019999999999998266" />
+ </joint>
+ <link  name="button_8" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-14.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-29.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-14.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-29.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_8"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_8" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_9" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-40.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-13.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-40.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-13.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_9"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_9" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_10" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-39.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-22.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-39.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-22.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_10"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_10" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_11" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-20.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-38.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-20.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-38.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_11"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_11" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_12" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-23.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-37.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-23.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-37.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_12"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_12" />
+  <origin  xyz="-8.88178419699999e-19 8.88178419699999e-19 -0.0019999999999997155" />
+ </joint>
+ <link  name="button_13" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-48.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-21.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-48.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-21.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_13"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_13" />
+  <origin  xyz="-8.881784197000236e-19 8.881784197000236e-19 -0.001999999999999771" />
+ </joint>
+ <link  name="button_14" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-46.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-27.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-46.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-27.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_14"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_14" />
+  <origin  xyz="-8.88178419699999e-19 8.88178419699999e-19 -0.0019999999999997155" />
+ </joint>
+ <link  name="button_15" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-28.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-45.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-28.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-45.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_15"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_15" />
+  <origin  xyz="-8.88178419699999e-19 8.88178419699999e-19 -0.0019999999999997155" />
+ </joint>
+ <link  name="button_16" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-47.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-25.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-47.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-25.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_16"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_16" />
+  <origin  xyz="-8.88178419699999e-19 8.88178419699999e-19 -0.0019999999999997155" />
+ </joint>
+ <link  name="button_17" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-44.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-24.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-44.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-24.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_17"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_17" />
+  <origin  xyz="-8.88178419699999e-19 8.88178419699999e-19 -0.0019999999999997155" />
+ </joint>
+ <link  name="button_18" >
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-43.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <visual >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-26.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </visual>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-43.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+  <collision >
+   <geometry >
+    <mesh  filename="/mnt/users/hyeslee/codes/baselines/articulate-anything/datasets/partnet-mobility-v0/dataset/7265/textured_objs/original-26.obj" />
+   </geometry>
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+  </collision>
+ </link>
+ <joint  name="microwave_body_to_button_18"  type="fixed" >
+  <parent  link="microwave_body" />
+  <child  link="button_18" />
+  <origin  xyz="-8.881784196999743e-19 8.881784196999743e-19 -0.00199999999999966" />
+ </joint>
+ <joint  name="microwave_body_to_door"  type="revolute" >
+  <parent  link="microwave_body" />
+  <child  link="door" />
+  <axis  xyz="0.0 1.0 4.440892098500626e-16" />
+  <limit  lower="0.0"  velocity="5"  effort="5"  upper="1.5707963267948966" />
+  <origin  xyz="-0.6648939766883853 -0.36893799090385443 0.3497839930057531" />
+ </joint>
+</robot>
