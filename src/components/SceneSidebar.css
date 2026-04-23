@@ -1,14 +1,17 @@
 .sidebar {
-  width: 260px;
+  width: 280px;
   flex-shrink: 0;
   height: 100%;
-  background: rgba(12, 12, 24, 0.95);
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   flex-direction: column;
   padding: 24px 0;
   overflow-y: auto;
   overflow-x: hidden;
+  z-index: 10;
 }
 
 .sidebar-header {
@@ -23,13 +26,14 @@
 .sidebar-logo {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
-  background: rgba(167, 139, 250, 0.1);
+  border-radius: 12px;
+  background: rgba(14, 165, 233, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border: 1px solid rgba(167, 139, 250, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
 }
 
 .sidebar-title {
@@ -92,8 +96,9 @@
 }
 
 .scene-item.active {
-  background: rgba(167, 139, 250, 0.12);
-  color: #c4b5fd;
+  background: rgba(14, 165, 233, 0.15);
+  color: #7dd3fc;
+  box-shadow: inset 0 0 0 1px rgba(14, 165, 233, 0.2);
 }
 
 .scene-item-icon {
@@ -108,7 +113,8 @@
 }
 
 .scene-item.active .scene-item-icon {
-  background: rgba(167, 139, 250, 0.2);
+  background: rgba(14, 165, 233, 0.25);
+  color: #38bdf8;
 }
 
 .scene-item-content {
@@ -133,15 +139,15 @@
 }
 
 .scene-item.active .scene-item-meta {
-  color: rgba(196, 181, 253, 0.5);
+  color: rgba(125, 211, 252, 0.6);
 }
 
 .scene-item-active-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #a78bfa;
-  box-shadow: 0 0 8px #a78bfa;
+  background: #38bdf8;
+  box-shadow: 0 0 10px #38bdf8;
   flex-shrink: 0;
 }
 

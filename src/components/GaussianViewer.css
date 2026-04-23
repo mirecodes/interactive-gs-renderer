@@ -18,10 +18,11 @@
   right: 20px;
   width: 300px;
   max-height: calc(100% - 40px);
-  background: rgba(15, 15, 15, 0.7);
-  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  border-radius: 20px;
   padding: 20px;
   color: #eee;
   display: flex;
@@ -75,7 +76,7 @@
 
 .control-item input[type="range"] {
   width: 100%;
-  accent-color: #00aaff;
+  accent-color: #0ea5e9;
   background: rgba(255, 255, 255, 0.1);
   height: 4px;
   border-radius: 2px;
@@ -85,7 +86,7 @@
 .value-label {
   align-self: flex-end;
   font-size: 11px;
-  color: #00aaff;
+  color: #38bdf8;
   font-family: 'JetBrains Mono', monospace;
 }
 
@@ -94,10 +95,11 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 24px;
   display: flex;
   align-items: center;
   gap: 10px;

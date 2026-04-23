@@ -21,7 +21,7 @@ export function LoadingOverlay({ loadStates }: LoadingOverlayProps) {
             <circle cx="24" cy="24" r="6" fill="url(#grad)" opacity="0.8" />
             <defs>
               <linearGradient id="grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#a78bfa" />
+                <stop stopColor="#0ea5e9" />
                 <stop offset="1" stopColor="#38bdf8" />
               </linearGradient>
             </defs>

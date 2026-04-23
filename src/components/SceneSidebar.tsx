@@ -18,7 +18,7 @@ export function SceneSidebar({ scenes, activeSceneId, onSelectScene }: SceneSide
             <circle cx="12" cy="12" r="2.5" fill="url(#sg)" />
             <defs>
               <linearGradient id="sg" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                <stop stopColor="#a78bfa" />
+                <stop stopColor="#0ea5e9" />
                 <stop offset="1" stopColor="#38bdf8" />
               </linearGradient>
             </defs>

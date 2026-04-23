@@ -4,8 +4,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(8, 8, 16, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(8, 10, 20, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 100;
   animation: overlay-fade-in 0.3s ease;
 }
@@ -32,7 +33,7 @@
 
 .loading-logo {
   animation: logo-spin 4s linear infinite;
-  filter: drop-shadow(0 0 16px rgba(167, 139, 250, 0.6));
+  filter: drop-shadow(0 0 16px rgba(14, 165, 233, 0.6));
 }
 
 @keyframes logo-spin {
@@ -95,7 +96,7 @@
   font-variant-numeric: tabular-nums;
 }
 
-.status-loading { color: #a78bfa; }
+.status-loading { color: #38bdf8; }
 .status-loaded  { color: #4ade80; }
 .status-error   { color: #f87171; }
 .status-idle    { color: rgba(255,255,255,0.3); }
@@ -114,7 +115,7 @@
 }
 
 .fill-loading {
-  background: linear-gradient(90deg, #a78bfa, #38bdf8);
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
 }
 
 .fill-loaded {
