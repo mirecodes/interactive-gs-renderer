@@ -15,7 +15,8 @@
     "js-yaml": "^4.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "three": "^0.184.0"
+    "three": "^0.184.0",
+    "urdf-loader": "^0.12.7"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

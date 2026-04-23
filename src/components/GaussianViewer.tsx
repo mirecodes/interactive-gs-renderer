@@ -16,7 +16,7 @@ export function GaussianViewer({ scene }: GaussianViewerProps) {
     setLoadStates(states);
   }, []);
 
-  useGaussianViewer({
+  const { setJointValue } = useGaussianViewer({
     containerRef,
     scene,
     onLoadStateChange: handleLoadStateChange,

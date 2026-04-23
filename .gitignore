@@ -26,5 +26,6 @@ dist-ssr
 # Data
 /data/
 public/data/ours/
+public/scripts
 *.ply
 *.splat
