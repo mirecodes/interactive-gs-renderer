@@ -1,2 +1,0 @@
-link_0 hinge sphere
-link_1 free globe_frame
