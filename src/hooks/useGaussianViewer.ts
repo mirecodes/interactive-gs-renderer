@@ -396,7 +396,7 @@ export function useGaussianViewer({
       renderer.dispose();
       while (container.firstChild) container.removeChild(container.firstChild);
     };
-  }, [scene, containerRef, onLoadStateChange, meshVisible, syncMeshVisibility, showJoints, showGrid]);
+  }, [scene, containerRef, onLoadStateChange]); // Only re-init when scene or core refs change
 
   return { joints };
 }
