@@ -26,6 +26,8 @@ interface UseGaussianViewerOptions {
   showGrid: boolean;
 }
 
+const DATA_ROOT = 'https://huggingface.co/datasets/mirecodes/reconstruction-output/resolve/main/';
+
 export function useGaussianViewer({
   containerRef,
   scene,
@@ -182,7 +184,7 @@ export function useGaussianViewer({
       let initialJoints: Record<string, number> = {};
       
       try {
-        const res = await fetch('cfgs/configs.yml');
+        const res = await fetch(`${DATA_ROOT}cfgs/configs.yml`);
         if (res.ok) {
           const text = await res.text();
           const config = yaml.load(text) as any;
@@ -199,7 +201,7 @@ export function useGaussianViewer({
       if (aborted) return;
 
       const loader = new URDFLoader();
-      const urdfPath = `data/${scene.path}/urdf/object.urdf`;
+      const urdfPath = `${DATA_ROOT}data/${scene.path}/urdf/object.urdf`;
       
       try {
         const robot = await new Promise<any>((resolve, reject) => {
@@ -227,7 +229,7 @@ export function useGaussianViewer({
 
         robot.updateMatrixWorld(true);
 
-        const basePath = `data/${scene.path}/gaussian`;
+        const basePath = `${DATA_ROOT}data/${scene.path}/gaussian`;
 
         Object.keys(robot.links).forEach((linkName) => {
           const link = robot.links[linkName];
