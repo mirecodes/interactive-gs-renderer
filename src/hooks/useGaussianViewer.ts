@@ -6,6 +6,7 @@ import URDFLoader from 'urdf-loader';
 import { OrbitControls } from 'three/addons/controls/OrbitControls';
 import type { SceneConfig, SplatLoadState } from '../types';
 import yaml from 'js-yaml';
+import { DATA_ROOT } from '../constants';
 
 interface JointInfo {
   name: string;
@@ -26,7 +27,7 @@ interface UseGaussianViewerOptions {
   showGrid: boolean;
 }
 
-const DATA_ROOT = 'https://huggingface.co/datasets/mirecodes/reconstruction-output/resolve/main/';
+
 
 export function useGaussianViewer({
   containerRef,

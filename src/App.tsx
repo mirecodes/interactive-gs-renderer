@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import type { SceneConfig, ScenesManifest } from './types';
 import { GaussianViewer } from './components/GaussianViewer';
 import { SceneSidebar } from './components/SceneSidebar';
+import { DATA_ROOT } from './constants';
 import './App.css';
 
 export default function App() {
@@ -11,7 +12,7 @@ export default function App() {
 
   // Load scene manifest on mount
   useEffect(() => {
-    fetch('/data/scenes.json')
+    fetch(`${DATA_ROOT}data/scenes.json`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
         return res.json() as Promise<ScenesManifest>;
